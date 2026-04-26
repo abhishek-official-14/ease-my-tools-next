@@ -3,10 +3,33 @@ import Navbar from "../src/components/Navbar";
 import Footer from "../src/components/Footer";
 import Providers from "./providers";
 
+const themeInitScript = `(() => {
+  try {
+    const theme = localStorage.getItem("theme") || "dark";
+    const root = document.documentElement;
+    root.classList.remove("light", "dark");
+    root.classList.add(theme);
+
+    const applyBodyTheme = () => {
+      if (!document.body) return;
+      document.body.classList.remove("light", "dark");
+      document.body.classList.add(theme);
+    };
+
+    applyBodyTheme();
+    if (!document.body) {
+      document.addEventListener("DOMContentLoaded", applyBodyTheme, { once: true });
+    }
+  } catch (_) {}
+})();`;
+
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body>
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
+      </head>
+      <body suppressHydrationWarning>
         <Providers>
           <div className="App">
             <Navbar />
