@@ -5,16 +5,19 @@ import Providers from "./providers";
 
 const themeInitScript = `(() => {
   try {
-    const theme = localStorage.getItem("theme") || "dark";
+    const defaultTheme = "light";
+    const storedTheme = localStorage.getItem("theme");
+    const theme = storedTheme === "dark" || storedTheme === "light" ? storedTheme : defaultTheme;
     const root = document.documentElement;
     root.classList.remove("light", "dark");
     root.classList.add(theme);
+    root.style.colorScheme = theme;
   } catch (_) {}
 })();`;
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" className="light" suppressHydrationWarning>
       <head>
         <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
       </head>
