@@ -8,7 +8,7 @@
 // const FileConverter = () => {
 //     const { t } = useTranslation('fileConverter');
 //     const ctx = useTheme();
-  const theme = ctx?.theme || "dark";
+  // const theme = ctx?.theme || "dark";
     
 //     const [file, setFile] = useState(null);
 //     const [originalContent, setOriginalContent] = useState('');

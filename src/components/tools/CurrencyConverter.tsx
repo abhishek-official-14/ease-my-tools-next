@@ -8,7 +8,7 @@
 // const CurrencyConverter = () => {
 //     const { t } = useTranslation('currencyConverter');
 //     const ctx = useTheme();
-  const theme = ctx?.theme || "dark";
+  // const theme = ctx?.theme || "dark";
     
 //     const [currencies, setCurrencies] = useState([]);
 //     const [conversion, setConversion] = useState({
