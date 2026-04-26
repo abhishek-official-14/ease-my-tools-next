@@ -17,8 +17,13 @@ const Navbar = () => {
   const menus = Array.isArray(rawMenus) ? rawMenus : []; // defensive guard
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState(null);
+  const [mounted, setMounted] = useState(false);
   const menuRef = useRef(null);
   const hamburgerRef = useRef(null);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   // Close menu when clicking outside
   useEffect(() => {
@@ -122,7 +127,7 @@ const Navbar = () => {
               Sign In
             </Link>
             <button className="theme-toggle-btn" onClick={toggleTheme}>
-              {theme === "light" ? "🌙 Dark" : "☀️ Light"}
+              {mounted ? (theme === "light" ? "🌙 Dark" : "☀️ Light") : ""}
             </button>
           </div>
 
