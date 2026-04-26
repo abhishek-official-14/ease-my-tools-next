@@ -9,11 +9,6 @@ const Header = () => {
 
   const words = [{ text: "Everything", color: "#7C3AED" }, { text: "PDFs", color: "#E11D48" }, { text: "Videos", color: "#2563EB" }, { text: "Images", color: "#059669" }];
   const [index, setIndex] = useState(0);
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
 
   useEffect(() => {
     if (words.length === 0) return;
@@ -24,8 +19,6 @@ const Header = () => {
 
     return () => clearInterval(interval);
   }, [words.length]);
-
-  if (!mounted) return null;
 
   // Fallback to avoid "undefined" errors
   const currentWord = words[index] || { text: "Tools", color: "#6366f1" };
