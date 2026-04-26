@@ -9,27 +9,16 @@ const themeInitScript = `(() => {
     const root = document.documentElement;
     root.classList.remove("light", "dark");
     root.classList.add(theme);
-
-    const applyBodyTheme = () => {
-      if (!document.body) return;
-      document.body.classList.remove("light", "dark");
-      document.body.classList.add(theme);
-    };
-
-    applyBodyTheme();
-    if (!document.body) {
-      document.addEventListener("DOMContentLoaded", applyBodyTheme, { once: true });
-    }
   } catch (_) {}
 })();`;
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <head>
         <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
       </head>
-      <body suppressHydrationWarning>
+      <body>
         <Providers>
           <div className="App">
             <Navbar />

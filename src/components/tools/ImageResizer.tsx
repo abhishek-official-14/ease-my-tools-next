@@ -5,7 +5,8 @@ import { useTheme } from '../../contexts/ThemeContext';
 import '../../styles/tools/ImageResizer.css';
 
 const ImageResizer = () => {
-    const { theme } = useTheme();
+    const ctx = useTheme();
+  const theme = ctx?.theme || "dark";
     const [originalImage, setOriginalImage] = useState(null);
     const [resizedImage, setResizedImage] = useState(null);
     const [width, setWidth] = useState(800);

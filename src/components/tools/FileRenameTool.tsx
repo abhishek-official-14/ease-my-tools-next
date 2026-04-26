@@ -7,7 +7,8 @@ import '../../styles/tools/FileRenameTool.css';
 const t = (key, fallback) => fallback ?? key;
 
 const FileRenameTool = () => {
-  const { theme } = useTheme();
+  const ctx = useTheme();
+  const theme = ctx?.theme || "dark";
   
   const [files, setFiles] = useState([]);
   const [originalFiles, setOriginalFiles] = useState([]);

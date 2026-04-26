@@ -5,7 +5,8 @@ import { useTheme } from '../../contexts/ThemeContext';
 import '../../styles/tools/RegexGenerator.css';
 
 const RegexGenerator = () => {
-    const { theme } = useTheme();
+    const ctx = useTheme();
+  const theme = ctx?.theme || "dark";
     
     const [description, setDescription] = useState('');
     const [regex, setRegex] = useState('');
@@ -326,7 +327,8 @@ export default RegexGenerator;
 
 // const RegexGenerator = () => {
 //     const { t } = useTranslation('regexGenerator');
-//     const { theme } = useTheme();
+//     const ctx = useTheme();
+  const theme = ctx?.theme || "dark";
     
 //     const [activeMode, setActiveMode] = useState('generate');
 //     const [description, setDescription] = useState('');

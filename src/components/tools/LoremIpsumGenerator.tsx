@@ -5,7 +5,8 @@ import { useTheme } from '../../contexts/ThemeContext';
 import '../../styles/tools/LoremIpsumGenerator.css';
 
 const LoremIpsumGenerator = () => {
-    const { theme } = useTheme();
+    const ctx = useTheme();
+  const theme = ctx?.theme || "dark";
     const [outputType, setOutputType] = useState('paragraphs');
     const [quantity, setQuantity] = useState(3);
     const [generatedText, setGeneratedText] = useState('');

@@ -5,7 +5,8 @@ import { useTheme } from '../../contexts/ThemeContext';
 import '../../styles/tools/AgeCalculator.css';
 
 const AgeCalculator = () => {
-    const { theme } = useTheme();
+    const ctx = useTheme();
+  const theme = ctx?.theme || "dark";
     const [birthDate, setBirthDate] = useState('');
     const [age, setAge] = useState(null);
 

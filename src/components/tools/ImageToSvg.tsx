@@ -5,7 +5,8 @@ import { useTheme } from '../../contexts/ThemeContext';
 import '../../styles/tools/ImageToSvg.css';
 
 const ImageToSvg = () => {
-    const { theme } = useTheme();
+    const ctx = useTheme();
+  const theme = ctx?.theme || "dark";
     const [file, setFile] = useState(null);
     const [originalImage, setOriginalImage] = useState('');
     const [svgOutput, setSvgOutput] = useState('');

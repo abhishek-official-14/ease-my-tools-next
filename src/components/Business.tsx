@@ -5,7 +5,8 @@ import { useTheme } from '../contexts/ThemeContext';
 import '../styles/Business.css';
 
 const Business = () => {
-  const { theme } = useTheme();
+  const ctx = useTheme();
+  const theme = ctx?.theme || "dark";
 
   const features = [
     {

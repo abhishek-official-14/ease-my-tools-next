@@ -7,7 +7,8 @@
 
 // const PDFImageExtractor = () => {
 //   const { t } = useTranslation('pdfImageExtractor');
-//   const { theme } = useTheme();
+//   const ctx = useTheme();
+  const theme = ctx?.theme || "dark";
   
 //   const [file, setFile] = useState(null);
 //   const [originalFile, setOriginalFile] = useState(null);
@@ -584,7 +585,8 @@
 
 // const PDFImageExtractor = () => {
 //   const { t } = useTranslation('pdfImageExtractor');
-//   const { theme } = useTheme();
+//   const ctx = useTheme();
+  const theme = ctx?.theme || "dark";
   
 //   const [file, setFile] = useState(null);
 //   const [originalFile, setOriginalFile] = useState(null);
@@ -836,7 +838,8 @@
 
 // const PDFImageExtractor = () => {
 //   const { t } = useTranslation('pdfImageExtractor');
-//   const { theme } = useTheme();
+//   const ctx = useTheme();
+  const theme = ctx?.theme || "dark";
   
 //   const [file, setFile] = useState(null);
 //   const [originalFile, setOriginalFile] = useState(null);
@@ -1446,7 +1449,8 @@ import '../../styles/tools/PDFImageExtractor.css';
 const t = (key, fallback) => fallback ?? key;
 
 const PDFImageExtractor = () => {
-  const { theme } = useTheme();
+  const ctx = useTheme();
+  const theme = ctx?.theme || "dark";
   
   const [file, setFile] = useState(null);
   const [originalFile, setOriginalFile] = useState(null);

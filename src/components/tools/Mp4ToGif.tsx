@@ -7,7 +7,8 @@
 
 // // // const Mp4ToGif = () => {
 // // //     const { t } = useTranslation('mp4ToGif');
-// // //     const { theme } = useTheme();
+// // //     const ctx = useTheme();
+  const theme = ctx?.theme || "dark";
 // // //     const [videoFile, setVideoFile] = useState(null);
 // // //     const [videoUrl, setVideoUrl] = useState('');
 // // //     const [gifUrl, setGifUrl] = useState('');
@@ -673,7 +674,8 @@
 
 // export default function Mp4ToGif() {
 //   const { t } = useTranslation();
-//   const { theme } = useTheme();
+//   const ctx = useTheme();
+  const theme = ctx?.theme || "dark";
 
 //   const [file, setFile] = useState(null);
 //   const [gifUrl, setGifUrl] = useState(null);

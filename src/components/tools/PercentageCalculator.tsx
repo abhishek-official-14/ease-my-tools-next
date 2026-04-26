@@ -5,7 +5,8 @@ import { useTheme } from '../../contexts/ThemeContext';
 import '../../styles/tools/PercentageCalculator.css';
 
 const PercentageCalculator = () => {
-    const { theme } = useTheme();
+    const ctx = useTheme();
+  const theme = ctx?.theme || "dark";
     const [calculationType, setCalculationType] = useState('percentage');
     const [values, setValues] = useState({
         percentage: '',

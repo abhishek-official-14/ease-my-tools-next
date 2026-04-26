@@ -1446,7 +1446,8 @@ const COMPREHENSIVE_FOOD_DATABASE = [
 // Total items in this database: 42 (from original) + 458+ (new) = 500+ items
 
 const NutritionMaster = () => {
-    const { theme } = useTheme();
+    const ctx = useTheme();
+  const theme = ctx?.theme || "dark";
     
     const [searchTerm, setSearchTerm] = useState('');
     const [selectedCategory, setSelectedCategory] = useState('all');

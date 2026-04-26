@@ -367,12 +367,12 @@
     background: #eff6ff;
 }
 
-body.dark .drop-zone {
+html.dark .drop-zone {
     background: var(--card-dark);
     border-color: #374151;
 }
 
-body.dark .drop-zone.dragging {
+html.dark .drop-zone.dragging {
     background: #1e3a8a;
 }
 
@@ -423,7 +423,7 @@ body.dark .drop-zone.dragging {
     outline: none;
 }
 
-body.dark .csv-input-section textarea {
+html.dark .csv-input-section textarea {
     background: var(--card-dark);
     border-color: #374151;
     color: var(--text-dark);
@@ -452,7 +452,7 @@ body.dark .csv-input-section textarea {
     background: white;
 }
 
-body.dark .setting-group select {
+html.dark .setting-group select {
     background: var(--card-dark);
     border-color: #374151;
     color: var(--text-dark);
@@ -510,7 +510,7 @@ body.dark .setting-group select {
     border-radius: 8px;
 }
 
-body.dark .conversion-info {
+html.dark .conversion-info {
     background: var(--card-dark);
 }
 
@@ -547,7 +547,7 @@ body.dark .conversion-info {
     padding: 20px;
 }
 
-body.dark .output-section {
+html.dark .output-section {
     background: var(--card-dark);
 }
 
@@ -612,7 +612,7 @@ body.dark .output-section {
     white-space: pre-wrap;
 }
 
-body.dark .json-output {
+html.dark .json-output {
     background: var(--bg-dark);
     border-color: #374151;
 }
@@ -624,7 +624,7 @@ body.dark .json-output {
     margin-top: 20px;
 }
 
-body.dark .csv-tips {
+html.dark .csv-tips {
     background: var(--card-dark);
 }
 

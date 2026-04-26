@@ -8,7 +8,8 @@ import { useTheme } from "../../contexts/ThemeContext";
 const Base64Converter = () => {
     console.log("Base64Converter was rendered");
     
-    const { theme } = useTheme();
+    const ctx = useTheme();
+  const theme = ctx?.theme || "dark";
     const [input, setInput] = useState("");
     const [output, setOutput] = useState("");
     const [mode, setMode] = useState("encode");

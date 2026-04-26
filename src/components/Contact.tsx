@@ -5,7 +5,8 @@ import { useTheme } from '../contexts/ThemeContext';
 import '../styles/LegalPage.css';
 
 const Contact = () => {
-  const { theme } = useTheme();
+  const ctx = useTheme();
+  const theme = ctx?.theme || "dark";
 
   return (
     <div className={`legal-page ${theme}`}>

@@ -5,7 +5,8 @@ import { useTheme } from '../contexts/ThemeContext';
 import '../styles/API.css';
 
 const API = () => {
-  const { theme } = useTheme();
+  const ctx = useTheme();
+  const theme = ctx?.theme || "dark";
   const [activeEndpoint, setActiveEndpoint] = useState(0);
 
   const endpoints = [

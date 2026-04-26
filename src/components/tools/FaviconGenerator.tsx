@@ -5,7 +5,8 @@ import { useTheme } from '../../contexts/ThemeContext';
 import '../../styles/tools/FaviconGenerator.css';
 
 const FaviconGenerator = () => {
-  const { theme } = useTheme();
+  const ctx = useTheme();
+  const theme = ctx?.theme || "dark";
   
   const [originalImage, setOriginalImage] = useState('');
   const [file, setFile] = useState(null);
