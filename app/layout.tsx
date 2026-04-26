@@ -5,7 +5,7 @@ import Providers from "./providers";
 
 const themeInitScript = `(() => {
   try {
-    const theme = localStorage.getItem("theme") || "dark";
+    const theme = localStorage.getItem("theme") || "light";
     const root = document.documentElement;
     root.classList.remove("light", "dark");
     root.classList.add(theme);
