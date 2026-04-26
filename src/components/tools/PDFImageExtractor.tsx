@@ -8,7 +8,7 @@
 // const PDFImageExtractor = () => {
 //   const { t } = useTranslation('pdfImageExtractor');
 //   const ctx = useTheme();
-  const theme = ctx?.theme || "dark";
+  // const theme = ctx?.theme || "dark";
   
 //   const [file, setFile] = useState(null);
 //   const [originalFile, setOriginalFile] = useState(null);
@@ -586,7 +586,7 @@
 // const PDFImageExtractor = () => {
 //   const { t } = useTranslation('pdfImageExtractor');
 //   const ctx = useTheme();
-  const theme = ctx?.theme || "dark";
+  // const theme = ctx?.theme || "dark";
   
 //   const [file, setFile] = useState(null);
 //   const [originalFile, setOriginalFile] = useState(null);
@@ -839,7 +839,7 @@
 // const PDFImageExtractor = () => {
 //   const { t } = useTranslation('pdfImageExtractor');
 //   const ctx = useTheme();
-  const theme = ctx?.theme || "dark";
+  // const theme = ctx?.theme || "dark";
   
 //   const [file, setFile] = useState(null);
 //   const [originalFile, setOriginalFile] = useState(null);

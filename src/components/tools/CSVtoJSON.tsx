@@ -265,7 +265,7 @@ export default CSVtoJSON;
 // const CsvToJson = () => {
 //     const { t } = useTranslation('csvToJson');
 //     const ctx = useTheme();
-  const theme = ctx?.theme || "dark";
+  // const theme = ctx?.theme || "dark";
 //     const [csvInput, setCsvInput] = useState('');
 //     const [jsonOutput, setJsonOutput] = useState('');
 //     const [delimiter, setDelimiter] = useState(',');

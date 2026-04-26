@@ -8,7 +8,7 @@
 // const RemoveBackground = () => {
 //     const { t } = useTranslation('removeBg');
 //     const ctx = useTheme();
-  const theme = ctx?.theme || "dark";
+  // const theme = ctx?.theme || "dark";
     
 //     const [file, setFile] = useState(null);
 //     const [originalImage, setOriginalImage] = useState('');
@@ -358,7 +358,7 @@
 // const RemoveBackground = () => {
 //   const { t } = useTranslation('removeBg');
 //   const ctx = useTheme();
-  const theme = ctx?.theme || "dark";
+  // const theme = ctx?.theme || "dark";
 
 //   const [file, setFile] = useState(null);
 //   const [originalImage, setOriginalImage] = useState('');

@@ -328,7 +328,7 @@ export default RegexGenerator;
 // const RegexGenerator = () => {
 //     const { t } = useTranslation('regexGenerator');
 //     const ctx = useTheme();
-  const theme = ctx?.theme || "dark";
+  // const theme = ctx?.theme || "dark";
     
 //     const [activeMode, setActiveMode] = useState('generate');
 //     const [description, setDescription] = useState('');
