@@ -1,19 +1,12 @@
 "use client";
 
-import { useEffect, useState } from "react";
 import Link from "next/link";
 import "../styles/Footer.css";
 import { useTheme } from "../contexts/ThemeContext";
 
 const Footer = () => {
   const ctx = useTheme();
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
-  const theme = mounted ? (ctx?.theme || "light") : "light";
+  const theme = ctx?.theme || "dark";
 
   return (
     <footer className={`footer ${theme}`}>

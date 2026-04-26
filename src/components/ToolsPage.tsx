@@ -12,8 +12,7 @@ const AUTO_SCROLL_INTERVAL = 2500;
 const ToolsPage = () => {
     const router = useRouter();
     const ctx = useTheme();
-    const [mounted, setMounted] = useState(false);
-    const theme = mounted ? (ctx?.theme || "light") : "light";
+  const theme = ctx?.theme || "dark";
 
     const toolCategories = getToolCategories();
     const allTools = getAllTools();
@@ -32,10 +31,6 @@ const ToolsPage = () => {
 
     const sliderRef = useRef(null);
     const startX = useRef(0);
-
-    useEffect(() => {
-        setMounted(true);
-    }, []);
 
     const filteredTools = searchQuery.trim()
         ? allTools.filter((t) => t.name.toLowerCase().includes(searchQuery.toLowerCase()))
