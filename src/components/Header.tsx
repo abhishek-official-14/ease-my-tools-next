@@ -6,15 +6,10 @@ import { useTheme } from "../contexts/ThemeContext";
 
 const Header = () => {
   const ctx = useTheme();
-  const [mounted, setMounted] = useState(false);
-  const theme = mounted ? (ctx?.theme || "light") : "light";
+  const theme = ctx?.theme || "dark";
 
   const words = [{ text: "Everything", color: "#7C3AED" }, { text: "PDFs", color: "#E11D48" }, { text: "Videos", color: "#2563EB" }, { text: "Images", color: "#059669" }];
   const [index, setIndex] = useState(0);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
 
   useEffect(() => {
     if (words.length === 0) return;
