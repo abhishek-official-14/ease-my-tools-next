@@ -1,0 +1,188 @@
+import {
+    FaQrcode,
+    FaFileCode,
+    FaExchangeAlt,
+    FaPalette,
+    FaImage,
+    FaFile,
+    FaCalculator,
+    FaGlobe,
+    FaTextHeight,
+    FaBeer,
+    FaHeartbeat,
+    FaFileCsv
+} from 'react-icons/fa';
+import {
+    MdFormatColorText,
+    MdOutlineImage,
+    MdOutlineCurrencyExchange,
+    MdAutoFixHigh,
+    MdOutlineDriveFileRenameOutline
+} from 'react-icons/md';
+import {  
+    BiCodeAlt,
+    BiText
+} from 'react-icons/bi';
+import {
+    AiOutlineFileText
+} from 'react-icons/ai';
+import {
+    TbBinaryTree,
+    TbFavicon,
+    TbVectorBezier,
+    TbVectorTriangle
+} from 'react-icons/tb';
+
+
+import { BsFiletypeSvg, BsRegex } from "react-icons/bs"
+import { VscFilePdf } from "react-icons/vsc"
+// Only include categories that have tools.
+
+export const toolsByCategory = {
+    image: [
+        { name: "Image Resizer", link: "/tools/image-resizer", icon: MdOutlineImage },
+        { name: "Color Picker", link: "/tools/color-picker", icon: FaPalette },
+        { name: "SvgConverter", link: "/tools/svg-converter", icon: BsFiletypeSvg },
+        { name: "ImageToSvg", link: "/tools/image-to-svg", icon: TbVectorTriangle },
+        { name: "RemoveBackground", link: "/tools/remove-background", icon: MdAutoFixHigh },
+        { name: "Mp4ToGif", link: "/tools/mp4-to-gif", icon: FaBeer },
+    ],
+    converters: [
+        { name: "Unit Converter", link: "/tools/unit-converter", icon: FaExchangeAlt },
+        { name: "Case Converter", link: "/tools/case-converter", icon: MdFormatColorText },
+        { name: "Currency Converter", link: "/tools/currency-converter", icon: MdOutlineCurrencyExchange },
+        { name: "Base64 Converter", link: "/tools/base64-converter", icon: TbBinaryTree },
+
+    ],
+    text: [
+        { name: "Word Counter", link: "/tools/word-counter", icon: AiOutlineFileText },
+        { name: "JSON Formatter", link: "/tools/json-formatter", icon: FaFileCode },
+        { name: "Markdown Previewer", link: "/tools/markdown-previewer", icon: BiCodeAlt },
+        { name: "Text Diff Checker", link: "/tools/text-diff-checker", icon: BiText },
+        { name: "PDFImageExtractor", link: "/tools/pdfImage-extractor", icon: VscFilePdf },
+    ],
+    calculators: [
+        { name: "Percentage Calculator", link: "/tools/percentage-calculator", icon: FaCalculator },
+        { name: "Age Calculator", link: "/tools/age-calculator", icon: FaCalculator },
+        { name: "Time Calculator", link: "/tools/time-calculator", icon: FaCalculator },
+    ],
+    file: [
+        { name: "CSV to JSON", link: "/tools/csv-to-json", icon: FaFile },
+        { name: "XML Formatter", link: "/tools/xml-formatter", icon: FaFileCode },
+        { name: "File Rename Tool", link: "/tools/file-rename-tool", icon: MdOutlineDriveFileRenameOutline },
+        { name: "File Converter", link: "/tools/file-converter", icon: FaFileCsv },
+        { name: "Regex Generator", link: "/tools/regex-generator", icon: BsRegex },
+        
+    ],
+    web: [
+        { name: "URL Encoder", link: "/tools/url-encoder", icon: FaGlobe },
+        { name: "Text Extractor", link: "/tools/text-extractor", icon: FaTextHeight },
+        { name: "SSL Checker", link: "/tools/ssl-checker", icon: FaTextHeight },
+        { name: "JWT Debugger", link: "/tools/jwt-debugger", icon: FaTextHeight },
+        { name: "FaviconGenerator", link: "/tools/favicon-generator", icon: TbFavicon },
+        { name: "WebsiteCostCalculator", link: "/tools/website-cost-calculator", icon: TbFavicon },
+    ],
+    generators: [
+        { name: "Lorem Ipsum Generator", link: "/tools/lorem-ipsum-generator", icon: FaTextHeight },
+        { name: "QR Code Tool", link: "/tools/qr-code-tool", icon: FaQrcode },
+        { name: "Hash Generator", link: "/tools/hash-generator", icon: TbVectorBezier },
+        { name: "Password Generator", link: "/tools/password-generator", icon: TbVectorBezier },
+        { name: "Data URI Generator", link: "/tools/data-uri-generator", icon: TbVectorBezier },
+    ],
+    health: [
+        { name: "Nutrition Master", link: "/tools/nutrition-master", icon: FaTextHeight },
+    ]
+    
+};
+
+export const categoryTitles = {
+    image: "Image Tools",
+    converters: "Converters",
+    text: "Text Tools",
+    calculators: "Calculators",
+    file: "File Tools",
+    web: "Web Tools",
+    generators: "Generators",
+    health: "Health Tools"
+};
+
+export const getAllTools = () => {
+    return Object.values(toolsByCategory).flat();
+};
+
+export const getToolCategories = () => {
+    return [
+        {
+            id: "image",
+            title: "Image Tools",
+            description: "Resize, convert and edit images",
+            color: "#F97316",
+            count: `${toolsByCategory.image.length} tools`,
+            icon: FaImage,
+            link: "/tools/category/image"
+        },
+        {
+            id: "converters",
+            title: "Converters",
+            description: "Various format converters",
+            color: "#8B5CF6",
+            count: `${toolsByCategory.converters.length} tools`,
+            icon: FaExchangeAlt,
+            link: "/tools/category/converters"
+        },
+        {
+            id: "text",
+            title: "Text Tools",
+            description: "Text formatting and analysis",
+            color: "#06B6D4",
+            count: `${toolsByCategory.text.length} tools`,
+            icon: BiText,
+            link: "/tools/category/text"
+        },
+        {
+            id: "calculators",
+            title: "Calculators",
+            description: "Various calculation tools",
+            color: "#10B981",
+            count: `${toolsByCategory.calculators.length} tools`,
+            icon: FaCalculator,
+            link: "/tools/category/calculators"
+        },
+        {
+            id: "file",
+            title: "File Tools",
+            description: "File conversion and management",
+            color: "#0D9488",
+            count: `${toolsByCategory.file.length} tools`,
+            icon: FaFile,
+            link: "/tools/category/file"
+        },
+        {
+            id: "web",
+            title: "Web Tools",
+            description: "Web development utilities",
+            color: "#EC4899",
+            count: `${toolsByCategory.web.length} tools`,
+            icon: FaGlobe,
+            link: "/tools/category/web"
+        },
+        {
+            id: "generators",
+            title: "Generators",
+            description: "Code and content generators",
+            color: "#F59E0B",
+            count: `${toolsByCategory.generators.length} tools`,
+            icon: FaQrcode,
+            link: "/tools/category/generators"
+        },
+        {
+            id: "health",
+            title: "Health Tools",
+            description: "Health and fitness utilities",
+            color: "#F43F5E",
+            count: `${toolsByCategory.health.length} tools`,
+            icon: FaHeartbeat,
+            link: "/tools/category/health"
+        }
+    ];
+};
