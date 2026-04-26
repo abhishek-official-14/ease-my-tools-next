@@ -7,7 +7,8 @@ import '../../styles/tools/PasswordGenerator.css';
 const t = (key, fallback) => fallback ?? key;
 
 const PasswordGenerator = () => {
-    const { theme } = useTheme();
+    const ctx = useTheme();
+  const theme = ctx?.theme || "dark";
     const [password, setPassword] = useState('');
     const [length, setLength] = useState(16);
     const [includeUppercase, setIncludeUppercase] = useState(true);

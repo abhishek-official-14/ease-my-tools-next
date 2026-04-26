@@ -5,7 +5,8 @@ import { useTheme } from '../../contexts/ThemeContext';
 import '../../styles/tools/TimeCalculator.css';
 
 const TimeCalculator = () => {
-    const { theme } = useTheme();
+    const ctx = useTheme();
+  const theme = ctx?.theme || "dark";
     const [calculationType, setCalculationType] = useState('add');
     const [time1, setTime1] = useState({ hours: 0, minutes: 0, seconds: 0 });
     const [time2, setTime2] = useState({ hours: 0, minutes: 0, seconds: 0 });

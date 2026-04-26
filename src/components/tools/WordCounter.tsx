@@ -5,7 +5,8 @@ import { useTheme } from '../../contexts/ThemeContext';
 import '../../styles/tools/WordCounter.css';
 
 const WordCounter = () => { // namespace for Word Counter
-    const { theme } = useTheme();
+    const ctx = useTheme();
+  const theme = ctx?.theme || "dark";
     const [text, setText] = useState('');
 
     const stats = {

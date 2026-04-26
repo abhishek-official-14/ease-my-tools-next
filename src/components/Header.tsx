@@ -5,7 +5,8 @@ import "../styles/Header.css";
 import { useTheme } from "../contexts/ThemeContext";
 
 const Header = () => {
-  const { theme } = useTheme();
+  const ctx = useTheme();
+  const theme = ctx?.theme || "dark";
 
   const words = [{ text: "Everything", color: "#7C3AED" }, { text: "PDFs", color: "#E11D48" }, { text: "Videos", color: "#2563EB" }, { text: "Images", color: "#059669" }];
   const [index, setIndex] = useState(0);

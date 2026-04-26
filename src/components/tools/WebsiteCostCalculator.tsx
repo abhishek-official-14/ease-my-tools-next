@@ -7,7 +7,8 @@ import '../../styles/tools/WebsiteCostCalculator.css';
 const t = (key, fallback) => fallback ?? key;
 
 const WebsiteCostCalculator = () => {
-    const { theme } = useTheme();
+    const ctx = useTheme();
+  const theme = ctx?.theme || "dark";
     
     const [projectDetails, setProjectDetails] = useState({
         name: '',

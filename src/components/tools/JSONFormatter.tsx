@@ -5,7 +5,8 @@ import { useTheme } from '../../contexts/ThemeContext';
 import '../../styles/tools/JSONFormatter.css';
 
 const JSONFormatter = () => { // <-- i18next
-    const { theme } = useTheme();
+    const ctx = useTheme();
+  const theme = ctx?.theme || "dark";
     const [inputJSON, setInputJSON] = useState('');
     const [formattedJSON, setFormattedJSON] = useState('');
     const [isValid, setIsValid] = useState(true);

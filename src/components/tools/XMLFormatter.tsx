@@ -5,7 +5,8 @@ import { useTheme } from '../../contexts/ThemeContext';
 import '../../styles/tools/XMLFormatter.css';
 
 const XMLFormatter = () => {
-    const { theme } = useTheme();
+    const ctx = useTheme();
+  const theme = ctx?.theme || "dark";
     const [inputXML, setInputXML] = useState('');
     const [formattedXML, setFormattedXML] = useState('');
     const [indentSize, setIndentSize] = useState(2);

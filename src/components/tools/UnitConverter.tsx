@@ -8,7 +8,8 @@ import '../../styles/tools/unitconverter.css';
 const t = (key, fallback) => fallback ?? key;
 
 const UnitConverter = () => { // <-- i18next
-    const { theme } = useTheme();
+    const ctx = useTheme();
+  const theme = ctx?.theme || "dark";
     const [category, setCategory] = useState('length');
     const [fromUnit, setFromUnit] = useState('meter');
     const [toUnit, setToUnit] = useState('kilometer');

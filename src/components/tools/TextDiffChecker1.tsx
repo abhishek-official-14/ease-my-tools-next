@@ -7,7 +7,8 @@ import '../../styles/tools/TextDiffChecker.css';
 const t = (key, fallback) => fallback ?? key;
 
 const TextDiffChecker = () => {
-    const { theme } = useTheme();
+    const ctx = useTheme();
+  const theme = ctx?.theme || "dark";
     const [text1, setText1] = useState('');
     const [text2, setText2] = useState('');
     const [diffResult, setDiffResult] = useState('');

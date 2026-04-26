@@ -5,7 +5,8 @@ import { useTheme } from '../contexts/ThemeContext';
 import '../styles/PrivacyPolicy.css';
 
 const PrivacyPolicy = () => {
-  const { theme } = useTheme();
+  const ctx = useTheme();
+  const theme = ctx?.theme || "dark";
 
   return (
     <div className={`privacy-policy ${theme}`}>

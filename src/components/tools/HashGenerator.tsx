@@ -5,7 +5,8 @@ import { useTheme } from '../../contexts/ThemeContext';
 import '../../styles/tools/HashGenerator.css';
 
 const HashGenerator = () => {
-    const { theme } = useTheme();
+    const ctx = useTheme();
+  const theme = ctx?.theme || "dark";
     const [inputText, setInputText] = useState('');
     const [hashes, setHashes] = useState({ md5: '', sha1: '', sha256: '' });
     const [isProcessing, setIsProcessing] = useState(false);

@@ -5,7 +5,8 @@ import { useTheme } from '../../contexts/ThemeContext';
 import '../../styles/tools/CSVtoJSON.css';
 
 const CSVtoJSON = () => {
-    const { theme } = useTheme();
+    const ctx = useTheme();
+  const theme = ctx?.theme || "dark";
     const [csvInput, setCsvInput] = useState('');
     const [jsonOutput, setJsonOutput] = useState('');
     const [delimiter, setDelimiter] = useState(',');
@@ -263,7 +264,8 @@ export default CSVtoJSON;
 
 // const CsvToJson = () => {
 //     const { t } = useTranslation('csvToJson');
-//     const { theme } = useTheme();
+//     const ctx = useTheme();
+  const theme = ctx?.theme || "dark";
 //     const [csvInput, setCsvInput] = useState('');
 //     const [jsonOutput, setJsonOutput] = useState('');
 //     const [delimiter, setDelimiter] = useState(',');

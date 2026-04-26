@@ -10,7 +10,9 @@ import { useTheme } from "../contexts/ThemeContext";
 const Navbar = () => {
   console.log("navbar was rendered");
 
-  const { theme, toggleTheme } = useTheme();
+  const ctx = useTheme();
+  const theme = ctx?.theme || "dark";
+  const toggleTheme = ctx?.toggleTheme || (() => {});
   const rawMenus = [{"title":"PDF","items":[{"label":"Merge PDF","icon":"📑"},{"label":"Split PDF","icon":"✂️"},{"label":"Compress PDF","icon":"📉"}]},{"title":"Image","items":[{"label":"Remove BG","icon":"🖼️"},{"label":"Resize","icon":"📏"},{"label":"Convert","icon":"🔄"}]},{"title":"Video","items":[{"label":"Compress","icon":"🎥"},{"label":"Mute","icon":"🔇"},{"label":"Convert","icon":"🔄"}]},{"title":"File","items":[{"label":"Split Excel","icon":"📊"},{"label":"Word → PDF","icon":"📝"},{"label":"PPT → PDF","icon":"📽️"}]}];
   const menus = Array.isArray(rawMenus) ? rawMenus : []; // defensive guard
   const [isMenuOpen, setIsMenuOpen] = useState(false);

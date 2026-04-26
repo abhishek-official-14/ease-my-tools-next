@@ -5,7 +5,8 @@ import { useTheme } from '../contexts/ThemeContext';
 import '../styles/FAQ.css';
 
 const FAQ = () => {
-  const { theme } = useTheme();
+  const ctx = useTheme();
+  const theme = ctx?.theme || "dark";
   const [openItems, setOpenItems] = useState({});
 
   const toggleItem = (index) => {

@@ -5,7 +5,8 @@ import { useTheme } from '../../contexts/ThemeContext';
 import '../../styles/tools/URLEncoder.css';
 
 const URLEncoder = () => {
-    const { theme } = useTheme();
+    const ctx = useTheme();
+  const theme = ctx?.theme || "dark";
     const [inputText, setInputText] = useState('');
     const [outputText, setOutputText] = useState('');
     const [operation, setOperation] = useState('encode');

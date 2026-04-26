@@ -7,7 +7,8 @@
 
 // const CurrencyConverter = () => {
 //     const { t } = useTranslation('currencyConverter');
-//     const { theme } = useTheme();
+//     const ctx = useTheme();
+  const theme = ctx?.theme || "dark";
     
 //     const [currencies, setCurrencies] = useState([]);
 //     const [conversion, setConversion] = useState({
@@ -431,7 +432,8 @@ import '../../styles/tools/CurrencyConverter.css';
 const t = (key, fallback) => fallback ?? key;
 
 const CurrencyConverter = () => {
-    const { theme } = useTheme();
+    const ctx = useTheme();
+  const theme = ctx?.theme || "dark";
     
     const [currencies, setCurrencies] = useState([]);
     const [conversion, setConversion] = useState({

@@ -11,7 +11,8 @@ const AUTO_SCROLL_INTERVAL = 2500;
 
 const ToolsPage = () => {
     const router = useRouter();
-    const { theme } = useTheme();
+    const ctx = useTheme();
+  const theme = ctx?.theme || "dark";
 
     const toolCategories = getToolCategories();
     const allTools = getAllTools();

@@ -5,7 +5,8 @@ import { useTheme } from '../../contexts/ThemeContext';
 import '../../styles/tools/JwtDebugger.css';
 
 const JwtDebugger = () => {
-    const { theme } = useTheme();
+    const ctx = useTheme();
+  const theme = ctx?.theme || "dark";
     const [jwtToken, setJwtToken] = useState('');
     const [decoded, setDecoded] = useState(null);
     const [error, setError] = useState('');

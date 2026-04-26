@@ -7,7 +7,8 @@ import '../../styles/tools/ColorPicker.css';
 const t = (key, fallback) => fallback ?? key;
 
 const ColorPicker = () => { // <-- i18next
-    const { theme } = useTheme();
+    const ctx = useTheme();
+  const theme = ctx?.theme || "dark";
     const [selectedColor, setSelectedColor] = useState('#667eea');
     const [colorHistory, setColorHistory] = useState([]);
 

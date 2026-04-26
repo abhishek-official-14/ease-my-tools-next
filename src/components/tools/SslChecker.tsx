@@ -7,7 +7,8 @@ import '../../styles/tools/SslChecker.css';
 const t = (key, fallback) => fallback ?? key;
 
 const SslChecker = () => {
-    const { theme } = useTheme();
+    const ctx = useTheme();
+  const theme = ctx?.theme || "dark";
     const [domain, setDomain] = useState('');
     const [certificate, setCertificate] = useState(null);
     const [loading, setLoading] = useState(false);

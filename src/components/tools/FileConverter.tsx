@@ -7,7 +7,8 @@
 
 // const FileConverter = () => {
 //     const { t } = useTranslation('fileConverter');
-//     const { theme } = useTheme();
+//     const ctx = useTheme();
+  const theme = ctx?.theme || "dark";
     
 //     const [file, setFile] = useState(null);
 //     const [originalContent, setOriginalContent] = useState('');
@@ -579,7 +580,8 @@ import { useTheme } from '../../contexts/ThemeContext';
 import '../../styles/tools/FileConverter.css';
 
 const FileConverter = () => {
-    const { theme } = useTheme();
+    const ctx = useTheme();
+  const theme = ctx?.theme || "dark";
     
     const [file, setFile] = useState(null);
     const [originalContent, setOriginalContent] = useState('');

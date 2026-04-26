@@ -7,7 +7,8 @@
 
 // const RemoveBackground = () => {
 //     const { t } = useTranslation('removeBg');
-//     const { theme } = useTheme();
+//     const ctx = useTheme();
+  const theme = ctx?.theme || "dark";
     
 //     const [file, setFile] = useState(null);
 //     const [originalImage, setOriginalImage] = useState('');
@@ -356,7 +357,8 @@
 
 // const RemoveBackground = () => {
 //   const { t } = useTranslation('removeBg');
-//   const { theme } = useTheme();
+//   const ctx = useTheme();
+  const theme = ctx?.theme || "dark";
 
 //   const [file, setFile] = useState(null);
 //   const [originalImage, setOriginalImage] = useState('');
@@ -951,7 +953,8 @@ import '../../styles/tools/RemoveBackground.css';
 const t = (key, fallback) => fallback ?? key;
 
 const RemoveBackground = () => {
-  const { theme } = useTheme();
+  const ctx = useTheme();
+  const theme = ctx?.theme || "dark";
   
   const API_BASE_URL = 'http://localhost:8000';
   const API = {

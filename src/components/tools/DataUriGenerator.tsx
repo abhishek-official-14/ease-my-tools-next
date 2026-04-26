@@ -5,7 +5,8 @@ import { useTheme } from '../../contexts/ThemeContext';
 import '../../styles/tools/DataUriGenerator.css';
 
 const DataUriGenerator = () => {
-    const { theme } = useTheme();
+    const ctx = useTheme();
+  const theme = ctx?.theme || "dark";
     const [inputType, setInputType] = useState('text');
     const [text, setText] = useState('');
     const [file, setFile] = useState(null);

@@ -46,7 +46,7 @@
     background-color: #fef2f2;
 }
 
-body.dark .input-section textarea.error {
+html.dark .input-section textarea.error {
     background-color: #1f1b1b;
 }
 
@@ -55,7 +55,7 @@ body.dark .input-section textarea.error {
     outline: none;
 }
 
-body.dark .input-section textarea {
+html.dark .input-section textarea {
     background: var(--card-dark);
     border-color: #374151;
     color: var(--text-dark);
@@ -103,7 +103,7 @@ body.dark .input-section textarea {
     border-left: 4px solid #dc2626;
 }
 
-body.dark .error-message {
+html.dark .error-message {
     background: #1f1b1b;
     color: #fca5a5;
 }
@@ -120,7 +120,7 @@ body.dark .error-message {
     border-radius: 8px;
 }
 
-body.dark .token-info {
+html.dark .token-info {
     background: var(--card-dark);
 }
 
@@ -143,7 +143,7 @@ body.dark .token-info {
     border-bottom: 1px solid #e5e7eb;
 }
 
-body.dark .info-item {
+html.dark .info-item {
     border-bottom-color: #374151;
 }
 
@@ -181,7 +181,7 @@ body.dark .info-item {
     overflow: hidden;
 }
 
-body.dark .jwt-part {
+html.dark .jwt-part {
     border-color: #374151;
 }
 
@@ -194,7 +194,7 @@ body.dark .jwt-part {
     border-bottom: 1px solid #e5e7eb;
 }
 
-body.dark .part-header {
+html.dark .part-header {
     background: var(--card-dark);
     border-bottom-color: #374151;
 }
@@ -231,7 +231,7 @@ body.dark .part-header {
     overflow-y: auto;
 }
 
-body.dark .json-output {
+html.dark .json-output {
     background: var(--bg-dark);
 }
 
@@ -243,7 +243,7 @@ body.dark .json-output {
     background: var(--bg-light);
 }
 
-body.dark .signature-output {
+html.dark .signature-output {
     background: var(--bg-dark);
 }
 
@@ -271,7 +271,7 @@ body.dark .signature-output {
     margin-top: 20px;
 }
 
-body.dark .jwt-info {
+html.dark .jwt-info {
     background: var(--card-dark);
 }
 

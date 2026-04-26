@@ -4,7 +4,8 @@
 // import { useTheme } from "../contexts/ThemeContext";
 
 // const Footer = () => {
-//   const { theme } = useTheme();
+//   const ctx = useTheme();
+  const theme = ctx?.theme || "dark";
 
 //   return (
 //     <footer className={`footer ${theme}`}>
@@ -84,7 +85,8 @@
 // import { useTheme } from "../contexts/ThemeContext";
 // 
 // const Footer = () => {
-//   const { theme } = useTheme();
+//   const ctx = useTheme();
+  const theme = ctx?.theme || "dark";
 
 //   return (
 //     <footer className={`footer ${theme}`}>
@@ -167,7 +169,8 @@ import { useTheme } from "../contexts/ThemeContext";
 const Footer = () => {
   console.log("Footer was rendered");
   
-  const { theme } = useTheme();
+  const ctx = useTheme();
+  const theme = ctx?.theme || "dark";
 
   return (
     <footer className={`footer ${theme}`}>

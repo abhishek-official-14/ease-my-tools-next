@@ -5,7 +5,8 @@ import { useTheme } from '../contexts/ThemeContext';
 import '../styles/Documentation.css';
 
 const Documentation = () => {
-  const { theme } = useTheme();
+  const ctx = useTheme();
+  const theme = ctx?.theme || "dark";
   const [activeSection, setActiveSection] = useState('getting-started');
 
   const sections = [

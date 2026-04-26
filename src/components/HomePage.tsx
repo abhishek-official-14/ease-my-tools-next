@@ -11,7 +11,8 @@ import TestimonialsSection from './TestimonialsSection';
 import NewsletterSection from './NewsletterSection';
 
 const HomePage = () => {
-  const { theme } = useTheme();
+  const ctx = useTheme();
+  const theme = ctx?.theme || "dark";
 
   return (
     <div className={`home-page ${theme}`}>

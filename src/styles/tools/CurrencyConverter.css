@@ -17,7 +17,7 @@
     font-weight: 700;
 }
 
-body.dark .tool-header h1 {
+html.dark .tool-header h1 {
     color: var(--text-dark);
 }
 
@@ -26,7 +26,7 @@ body.dark .tool-header h1 {
     font-size: 1.1rem;
 }
 
-body.dark .tool-header p {
+html.dark .tool-header p {
     color: #9ca3af;
 }
 
@@ -45,7 +45,7 @@ body.dark .tool-header p {
     transition: all 0.3s ease;
 }
 
-body.dark .conversion-card {
+html.dark .conversion-card {
     background: var(--card-dark);
 }
 
@@ -62,7 +62,7 @@ body.dark .conversion-card {
     color: var(--text-light);
 }
 
-body.dark .amount-section label {
+html.dark .amount-section label {
     color: var(--text-dark);
 }
 
@@ -82,7 +82,7 @@ body.dark .amount-section label {
     transition: all 0.2s;
 }
 
-body.dark .amount-input {
+html.dark .amount-input {
     background: #374151;
     border-color: #4b5563;
     color: var(--text-dark);
@@ -124,7 +124,7 @@ body.dark .amount-input {
     font-size: 0.9rem;
 }
 
-body.dark .currency-group label {
+html.dark .currency-group label {
     color: var(--text-dark);
 }
 
@@ -139,7 +139,7 @@ body.dark .currency-group label {
     cursor: pointer;
 }
 
-body.dark .currency-select {
+html.dark .currency-select {
     background: #374151;
     border-color: #4b5563;
     color: var(--text-dark);
@@ -187,7 +187,7 @@ body.dark .currency-select {
     border: 1px solid #bfdbfe;
 }
 
-body.dark .loading-indicator {
+html.dark .loading-indicator {
     background: #1e3a8a;
     border-color: #3b82f6;
 }
@@ -211,7 +211,7 @@ body.dark .loading-indicator {
     font-weight: 500;
 }
 
-body.dark .loading-indicator span {
+html.dark .loading-indicator span {
     color: #dbeafe;
 }
 
@@ -226,7 +226,7 @@ body.dark .loading-indicator span {
     border: 1px solid #fecaca;
 }
 
-body.dark .error-message {
+html.dark .error-message {
     background: #7f1d1d;
     border-color: #fecaca;
 }
@@ -236,7 +236,7 @@ body.dark .error-message {
     font-weight: 500;
 }
 
-body.dark .error-message span {
+html.dark .error-message span {
     color: #fecaca;
 }
 
@@ -263,7 +263,7 @@ body.dark .error-message span {
     border: 2px solid #bfdbfe;
 }
 
-body.dark .conversion-result {
+html.dark .conversion-result {
     background: #1e3a8a;
     border-color: #3b82f6;
 }
@@ -287,7 +287,7 @@ body.dark .conversion-result {
     font-weight: 500;
 }
 
-body.dark .result-label {
+html.dark .result-label {
     color: #9ca3af;
 }
 
@@ -307,8 +307,8 @@ body.dark .result-label {
     border-bottom: 1px solid #e5e7eb;
 }
 
-body.dark .rate-info,
-body.dark .cache-info {
+html.dark .rate-info,
+html.dark .cache-info {
     border-color: #4b5563;
 }
 
@@ -323,8 +323,8 @@ body.dark .cache-info {
     font-weight: 500;
 }
 
-body.dark .rate-label,
-body.dark .cache-label {
+html.dark .rate-label,
+html.dark .cache-label {
     color: #9ca3af;
 }
 
@@ -337,8 +337,8 @@ body.dark .cache-label {
     gap: 0.5rem;
 }
 
-body.dark .rate-value,
-body.dark .cache-value {
+html.dark .rate-value,
+html.dark .cache-value {
     color: var(--text-dark);
 }
 
@@ -375,7 +375,7 @@ body.dark .cache-value {
     border-top: 2px solid #e5e7eb;
 }
 
-body.dark .historical-section {
+html.dark .historical-section {
     border-color: #4b5563;
 }
 
@@ -395,7 +395,7 @@ body.dark .historical-section {
     border-radius: 8px;
 }
 
-body.dark .trend-indicator {
+html.dark .trend-indicator {
     background: #374151;
 }
 
@@ -408,7 +408,7 @@ body.dark .trend-indicator {
     color: var(--text-light);
 }
 
-body.dark .trend-text {
+html.dark .trend-text {
     color: var(--text-dark);
 }
 
@@ -424,7 +424,7 @@ body.dark .trend-text {
     border: 1px solid #e5e7eb;
 }
 
-body.dark .history-chart {
+html.dark .history-chart {
     background: #374151;
     border-color: #4b5563;
 }
@@ -472,7 +472,7 @@ body.dark .history-chart {
     border-radius: 6px;
 }
 
-body.dark .history-row {
+html.dark .history-row {
     background: #374151;
     border-color: #4b5563;
 }
@@ -482,7 +482,7 @@ body.dark .history-row {
     font-weight: 500;
 }
 
-body.dark .history-date {
+html.dark .history-date {
     color: var(--text-dark);
 }
 
@@ -504,7 +504,7 @@ body.dark .history-date {
     padding: 1.5rem;
 }
 
-body.dark .popular-currencies {
+html.dark .popular-currencies {
     background: var(--card-dark);
 }
 
@@ -531,7 +531,7 @@ body.dark .popular-currencies {
     color: #374151;
 }
 
-body.dark .currency-chip {
+html.dark .currency-chip {
     background: #374151;
     border-color: #4b5563;
     color: #d1d5db;
@@ -561,7 +561,7 @@ body.dark .currency-chip {
     padding: 1.5rem;
 }
 
-body.dark .currency-list-section {
+html.dark .currency-list-section {
     background: var(--card-dark);
 }
 
@@ -592,7 +592,7 @@ body.dark .currency-list-section {
     font-size: 0.9rem;
 }
 
-body.dark .search-input {
+html.dark .search-input {
     background: #374151;
     border-color: #4b5563;
     color: var(--text-dark);
@@ -622,7 +622,7 @@ body.dark .search-input {
     transition: all 0.2s;
 }
 
-body.dark .currency-item {
+html.dark .currency-item {
     background: #374151;
     border-color: #4b5563;
 }
@@ -637,7 +637,7 @@ body.dark .currency-item {
     border-color: var(--primary);
 }
 
-body.dark .currency-item.selected {
+html.dark .currency-item.selected {
     background: #1e3a8a;
 }
 
@@ -652,7 +652,7 @@ body.dark .currency-item.selected {
     color: var(--text-light);
 }
 
-body.dark .currency-code {
+html.dark .currency-code {
     color: var(--text-dark);
 }
 
@@ -674,7 +674,7 @@ body.dark .currency-code {
     padding: 1.5rem;
 }
 
-body.dark .tips-section {
+html.dark .tips-section {
     background: var(--card-dark);
 }
 
@@ -699,7 +699,7 @@ body.dark .tips-section {
     line-height: 1.5;
 }
 
-body.dark .tip-item {
+html.dark .tip-item {
     background: #1e3a8a;
 }
 

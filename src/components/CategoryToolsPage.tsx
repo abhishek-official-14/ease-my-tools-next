@@ -11,7 +11,8 @@ const CategoryToolsPage = () => {
     const params = useParams();
     const categoryId = params?.categoryId as string;
     const router = useRouter();
-    const { theme } = useTheme();
+    const ctx = useTheme();
+  const theme = ctx?.theme || "dark";
     const [animated, setAnimated] = useState(false);
 
     useEffect(() => {
