@@ -27,6 +27,7 @@ const ToolsPage = () => {
     const [enableTransition, setEnableTransition] = useState(true);
     const [dragOffset, setDragOffset] = useState(0);
     const [hasMoved, setHasMoved] = useState(false);
+    const [mounted, setMounted] = useState(false);
 
     const sliderRef = useRef(null);
     const startX = useRef(0);
@@ -34,6 +35,10 @@ const ToolsPage = () => {
     const filteredTools = searchQuery.trim()
         ? allTools.filter((t) => t.name.toLowerCase().includes(searchQuery.toLowerCase()))
         : [];
+
+    useEffect(() => {
+        setMounted(true);
+    }, []);
 
     // --- SLIDER ACTIONS ---
     const next = useCallback(() => {
@@ -117,6 +122,8 @@ const ToolsPage = () => {
     const containerWidth = sliderRef.current?.offsetWidth || 1;
     const dragPercent = (dragOffset / containerWidth) * 100;
     const finalTranslateX = -(currentIndex * 100) + dragPercent;
+
+    if (!mounted) return null;
 
     return (
         <>
