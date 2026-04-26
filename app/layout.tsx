@@ -9,17 +9,6 @@ const themeInitScript = `(() => {
     const root = document.documentElement;
     root.classList.remove("light", "dark");
     root.classList.add(theme);
-
-    const applyBodyTheme = () => {
-      if (!document.body) return;
-      document.body.classList.remove("light", "dark");
-      document.body.classList.add(theme);
-    };
-
-    applyBodyTheme();
-    if (!document.body) {
-      document.addEventListener("DOMContentLoaded", applyBodyTheme, { once: true });
-    }
   } catch (_) {}
 })();`;
 
