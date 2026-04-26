@@ -8,10 +8,8 @@ import "../styles/Navbar.css";
 import { useTheme } from "../contexts/ThemeContext";
 
 const Navbar = () => {
-  console.log("navbar was rendered");
-
   const ctx = useTheme();
-  const theme = ctx?.theme || "dark";
+  const theme = ctx?.theme || "light";
   const toggleTheme = ctx?.toggleTheme || (() => {});
   const rawMenus = [{"title":"PDF","items":[{"label":"Merge PDF","icon":"📑"},{"label":"Split PDF","icon":"✂️"},{"label":"Compress PDF","icon":"📉"}]},{"title":"Image","items":[{"label":"Remove BG","icon":"🖼️"},{"label":"Resize","icon":"📏"},{"label":"Convert","icon":"🔄"}]},{"title":"Video","items":[{"label":"Compress","icon":"🎥"},{"label":"Mute","icon":"🔇"},{"label":"Convert","icon":"🔄"}]},{"title":"File","items":[{"label":"Split Excel","icon":"📊"},{"label":"Word → PDF","icon":"📝"},{"label":"PPT → PDF","icon":"📽️"}]}];
   const menus = Array.isArray(rawMenus) ? rawMenus : []; // defensive guard
@@ -24,6 +22,9 @@ const Navbar = () => {
   useEffect(() => {
     setMounted(true);
   }, []);
+
+  const headerClassName = mounted ? `navbar navbar-${theme}` : "navbar";
+  const themeToggleLabel = mounted ? (theme === "light" ? "🌙 Dark" : "☀️ Light") : "";
 
   // Close menu when clicking outside
   useEffect(() => {
@@ -69,7 +70,7 @@ const Navbar = () => {
   };
 
   return (
-    <header className={`navbar navbar-${theme}`}>
+    <header className={headerClassName}>
       <div className="navbar-container">
         {/* Logo */}
         <Link href="/" className="navbar-logo" style={{ textDecoration: "None" }}>
@@ -127,7 +128,7 @@ const Navbar = () => {
               Sign In
             </Link>
             <button className="theme-toggle-btn" onClick={toggleTheme}>
-              {mounted ? (theme === "light" ? "🌙 Dark" : "☀️ Light") : ""}
+              {themeToggleLabel}
             </button>
           </div>
 
